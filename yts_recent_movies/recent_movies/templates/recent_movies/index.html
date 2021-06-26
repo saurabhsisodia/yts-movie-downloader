@@ -1,0 +1,60 @@
+{% extends 'recent_movies/main.html' %}
+{% load static %}
+
+{% block content %}
+	{% for movie in movieList %}
+			<!--<a href="">
+				<div class="w3-display-container w3-card-4 w3-panel">
+					<div class="w3-display-middle">
+
+						<img class="w3-circle" style="width:15%;height:30%" src="{{movie.image.url}}">
+						<p>{{movie.name}} <br><strong>IMDB:{{movie.imdbRating}}</strong></p>
+					</div>
+					<div class="w3-display-left">
+						<strong>Cast</strong>
+					</div>
+
+
+				</div>
+			</a> !-->
+
+			<a href="">
+				<div class="w3-display-container  w3-card-4 w3-panel w3-brown" style="height:55%;">
+				    <div class="w3-display-topleft w3-padding">
+				    	<strong class="w3-button">Cast</strong>
+				    	<p>Abela Danger</p>
+				    	<p>Riley Reid</p>
+				    	<p>Angela White</p>
+				    	<p>Darci Dolce</p>
+				    </div>
+
+				    <div class="w3-display-topright w3-padding">
+				    	
+				    	<strong class="w3-button">Torrent Links</strong>
+				    	<p>hello</p>
+				    	<p>world</p>
+				    	<p>hello</p>
+				    </div>
+				    <!--<div class="w3-display-bottomleft w3-padding">Bottom Left</div> 
+				    <div class="w3-display-bottomright w3-padding">Bottom Right</div>
+				    <div class="w3-display-left w3-padding">Left</div>!
+				    <div class="w3-display-right w3-padding">Right</div>!-->
+				    <div class="w3-display-topmiddle w3-padding w3-center">
+				    	
+						<img  style="" src="{{movie.image.url}}">
+
+				    </div>
+				    <!--<div class="w3-display-topmiddle w3-padding w3-hide-small">
+						<p>{{movie.name}} <strong> IMDB:{{movie.imdbRating}}</strong></p>
+				    </div>!-->
+
+				    <div class="w3-display-bottomleft w3-padding">
+				    	
+				    	<p class="w3-button">{{movie.name}}<strong> IMDB:{{movie.imdbRating}}</strong></p>
+				    </div> 
+				  </div>
+			</a>
+	{% endfor %}
+
+
+{% endblock %}
